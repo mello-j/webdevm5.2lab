@@ -13,6 +13,19 @@ Module 2: Lab 2.2
 For this project we were given a site with accessibility issues, and tasked with addressing as many of said issues to the best of our abilities. The site was checked with an accessibility checker, and we practiced navigating a site
 from the perspective of a user who would encounter these accessibility challenges.
 
+## Running the Website
+
+1. To run everything you will need to Fork or Clone this repository and open in up in an IDE on your local PC or in VS Codespaces.
+
+2. Once you have cloned the Repo, open it up in VS Code.
+
+3. Select the index.html file from the Explorer Window.
+
+4. Then, using the VS Code Command Palette, type: > Live Preview Start Server. If this command is not available, you may need to install the VS Code Live Preview extension.
+
+5. This will open up a website preview within your IDE. You can also open this in an external browser if you choose, by clicking on the 3 horizontal lines icon to the top right of the preview window and selecting 'Open in Browser'.
+
+
 ## Accessibility Lab Answers  
 
 ### Color
@@ -52,39 +65,40 @@ This should be navigable for screen readers and anyone hearing impaired, offerin
 
 #### The `<audio>` player isn't accessible to those using older browsers that don't support HTML audio. How can you allow them to still access the audio?
 
-
+For those using an older browser that doesn't support HTML audio, we can provide them with a direct link to the file. That way they can still access the audio (or video content) being rendered on the page!
 
 ### The Forms
 #### The `<input>` element in the search form at the top could do with a label, but we don't want to add a visible text label that would potentially spoil the design and isn't really needed by sighted users. How can you add a label that is only accessible to screen readers?
 
+I can do a couple things, I can add a role to the form which will inform screen readers the actual role of the form. I can also add an aria-label which will specifically call out that label to someone using a screen reader, but does not change the visual display of the form so it only appears to those navigating the screen via a screen reader!
+
 
 #### The two `<input>` elements in the comment form have visible text labels, but they are not unambiguously associated with their labels — how do you achieve this? Note that you'll need to update some of the CSS rule as well.
+If I'm understanding this one correctly, we can do this just by updating the labels and applying them correctly with a name label and comment label for each field.
 
 ### The Show/Hide Comment Control
 #### The show/hide comment control button is not currently keyboard-accessible. Can you make it keyboard-accessible, both in terms of focusing it using the tab key and activating it using the return key?
 
+Yes, we can make this keyboard accessible using a button. Updating it as a button inherently making that accessible versus the current div class that is in! Tested and verified working.
+
 ### The Table
+
 #### The data table is not currently very accessible — it is hard for screen reader users to associate data rows and columns together, and the table also has no kind of summary to make it clear what it shows. Can you add some features to your HTML to fix this problem?
+
+Yes, we can add a table summary, table columns, and table row information so that it is clear to the screen reader what is going on in the table!
 
 
 ### Other Considerations?
 #### Can you list two more ideas for improvements that would make the website more accessible?
 
+Yes - a couple ideas. I still have some contrast issues with the Header so I could make that text darker still for a better contrast ratio.
+I could also use some additional items like tab order, skipping links in the nav menu (or in the audio player) to improve keyboard naviagation. Lastly I suck with alt text so I think the alt text for the images could be improved, and maybe even some captions added!
+
 ## Sources and Credits
 
-TODO: You must credit the sources and authors of any code, libraries, or other
-assets you use in your project. If you leave this section blank, your project
-will be considered in violation of the Academic Honesty policy unless you truly
-created everything from scratch with no outside help. If you need to use a
-source that you cannot credit (e.g. a classmate's work), you must get explicit
-permission from your instructor.
 
-A simple bulleted list below is sufficient. For example:
-
-- Bootstrap: https://getbootstrap.com/
-- jQuery: https://jquery.com/
-- Background image: https://unsplash.com/photos/...
-- Sound effects: https://freesound.org/people/...
-- Icons: https://fontawesome.com/
-- Fonts: https://fonts.google.com/
-- etc.
+- [Buttons](https://govtnz.github.io/web-a11y-guidance/wct/buttons/make-a-button-accessible/buttons-keyboard-mouse-and-touch-accessibility.html#:~:text=Native%20HTML%20buttons,-%C2%A7Copy%20link&text=to%20this%20section-,A%20button%20created%20using%20the%20or,the%20Space%20or%20Enter%20keys.)
+- HTML Accessibility: https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML
+- WAI-ARIA Basics: https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics
+- Accessible Multimedia: https://developer.mozilla.org/en-US/docs/Learn/Accessibility/Multimedia
+- HTML Tables: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table

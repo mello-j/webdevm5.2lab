@@ -14,7 +14,9 @@
   </head>
 
   <body>
+    <header>
     <h1>Welcome to our wildlife website</h1>
+    </header>
 
     <nav role="navigation">
       <ul>
@@ -54,19 +56,20 @@
         </section>
         
 
-        <table>
+        <table caption ="Statistics about wild and urban bears">
           <thead>
             <tr>
-              <td>Bear Type</td>
-              <td>Coat</td>
-              <td>Adult size</td>
-              <td>Habitat</td>
-              <td>Lifespan</td>
-              <td>Diet</td>
+              <td scope="col">Bear Type</td>
+              <td scope="col">Coat</td>
+              <td scope="col">Adult size</td>
+              <td scope="col">Habitat</td>
+              <td scope="col">Lifespan</td>
+              <td scope="col">Diet</td>
             </tr>
           </thead>
           <tbody>
             <tr>
+              <th scope="row">Wild</th>
               <td>Wild</td>
               <td>Brown or black</td>
               <td>1.4 to 2.8 meters</td>
@@ -75,6 +78,7 @@
               <td>Fish, meat, plants</td>
             </tr>
             <tr>
+              <th scope="row">Urban</th>
               <td>Urban</td>
               <td>North Face</td>
               <td>18 to 22</td>
@@ -140,7 +144,7 @@
 
         </aside>
         <section class="comments">
-          <div class="show-hide">Show comments</div>
+          <button class="show-hide">Show comments</button>
 
           <div class="comment-wrapper">
 
@@ -148,11 +152,11 @@
 
             <form class="comment-form">
               <div class="flex-pair">
-                Your name:
+                <label for="name">Your name:</label>
                 <input type="text" name="name" id="name" placeholder="Enter your name">
               </div>
               <div class="flex-pair">
-                Your comment:
+                <label for="comment">Your comment:</label>
                 <input type="text" name="comment" id="comment" placeholder="Enter your comment">
               </div>
               <div>
@@ -197,7 +201,7 @@
       <p>©Copyright 2050 by nobody. All rights reversed.</p>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="/js/main.js"></script>
 
   </body>
 </html>
